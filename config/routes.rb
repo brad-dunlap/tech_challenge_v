@@ -5,4 +5,10 @@ Rails.application.routes.draw do
   # root "articles#index"
 
   root "playlists#index"
+
+  resources :playlists do
+    resources :playlist_tracks
+  end
+
+  resources :songs
 end

@@ -3,3 +3,24 @@
     <h1>PlayTunes</h1>
   </div>
 </nav>
+
+
+
+<div style="margin: 50px;">
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <% @playlists.map do |playlist| %>
+      <div class="col">
+        <div class="card" style="width: 35rem;">
+          <div class="card text-center">
+            <img src="<%= playlist.img %>" class="card-img-top" alt="<%= playlist.title %>">
+            <div class="card-body">
+              <h5 class="card-title"><%= playlist.title %></h5>
+              <a href="playlists/<%= playlist.id %>" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+<div>
+

@@ -10,10 +10,8 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_03_26_174345) do
+ActiveRecord::Schema[7.0].define(version: 2023_03_28_002428) do
   create_table "playlist_tracks", force: :cascade do |t|
-    t.string "commenter"
-    t.text "body"
     t.integer "song_id", null: false
     t.integer "playlist_id", null: false
     t.datetime "created_at", null: false
