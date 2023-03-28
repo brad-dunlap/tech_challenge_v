@@ -16,6 +16,7 @@
         <td><%= song.artist %></td>
         <td><%= song.genre %></td>
         <td><%= song.length %></td>
+        <td><%= button_to "Remove", "/", method: :post, class: "btn btn-danger btn-lg"%></td>
       </tr>
     <% end %>
   </tbody>
