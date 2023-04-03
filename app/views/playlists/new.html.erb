@@ -1,0 +1,23 @@
+
+<div class="container" style="margin-top: 100px">
+	<div class="child">
+		<div class="child">
+		<h1> New Playlist </h1>
+		</div>
+	<%= form_with model: @playlist, url: new_playlist_url do |form| %>
+		<div class="mb-3">
+			<label for="validationCustom01" class="form-label">Playlist Title</label>
+			<%= form.text_field :title, class: "from-control" %>
+		</div>
+		<div class="mb-3">
+			<label for="validationCustom01" class="form-label">Image URL</label>
+			<%= form.text_field :img, class: "from-control" %>
+		</div>
+	<% end %>
+	</div>
+</div>
+<div class="container" style="margin: 50px">
+	<div class="child" style="margin: 50px;">
+		<a href="/" class="btn btn-primary">Back to Playlists</a>
+	</div>
+</div>

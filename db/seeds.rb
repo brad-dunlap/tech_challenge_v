@@ -40,9 +40,9 @@ end
 # --------VVV---- Playlist Seeds ----------VVV---------------
 
 PLAYLIST_IMGS = %w[
-  https://loremflickr.com/cache/resized/7224_13948077881_2f0f0ae8c5_c_500_500_nofilter.jpg
+  https://www.shutterstock.com/image-vector/musical-poster-your-design-music-600w-1148675771.jpg
 
-  https://loremflickr.com/cache/resized/8681_16420166577_6e7f3c499a_c_500_500_nofilter.jpg
+  https://www.shutterstock.com/image-vector/astronaut-man-meditates-music-yoga-600w-1142969276.jpg
 ]
 
 

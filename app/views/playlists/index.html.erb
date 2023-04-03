@@ -15,7 +15,7 @@
             <img src="<%= playlist.img %>" class="card-img-top" alt="<%= playlist.title %>">
             <div class="card-body">
               <h5 class="card-title"><%= playlist.title %></h5>
-              <a href="playlists/<%= playlist.id %>" class="btn btn-primary">Go somewhere</a>
+              <a href="playlists/<%= playlist.id %>" class="btn btn-primary">View Playlist</a>
             </div>
           </div>
         </div>
@@ -23,4 +23,11 @@
     <% end %>
   </div>
 <div>
+    <div style="margin: 50px;">
+      <a href="playlists/new" class="btn btn-primary">Create New Playlist</a>
+    </div>
+
+    <div style="margin: 50px;">
+      <a href="songs/new" class="btn btn-primary">Add New Song</a>
+    </div>
 
