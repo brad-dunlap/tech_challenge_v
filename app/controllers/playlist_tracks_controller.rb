@@ -1,8 +1,5 @@
 class PlaylistTracksController < ApplicationController
-
   def show; end
-
-
 
   def create
     attrs = {
@@ -19,5 +16,4 @@ class PlaylistTracksController < ApplicationController
   def playlist_track_params
     params.permit({ playlist_track: [:song_id] }, :playlist_id)
   end
-
 end

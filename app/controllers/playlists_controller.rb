@@ -1,6 +1,4 @@
 class PlaylistsController < ApplicationController
-
-
   def index
     @playlists = Playlist.all
   end
@@ -8,12 +6,16 @@ class PlaylistsController < ApplicationController
   def show
     @playlist = Playlist.find(params[:id])
     @songs_in_playlist = @playlist.songs
+    @playlist_time_in_minutes = playlist_time_in_minutes
   end
 
   def new
     @playlist = Playlist.new
   end
 
-  def create
+  def create; end
+
+  def playlist_time_in_minutes
+    #TODO: implement
   end
 end

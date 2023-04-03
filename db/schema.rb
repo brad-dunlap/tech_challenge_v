@@ -10,7 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_03_28_002428) do
+ActiveRecord::Schema[7.0].define(version: 2023_04_03_120230) do
+  create_table "artists", force: :cascade do |t|
+    t.string "name"
+    t.string "image_url"
+    t.string "bio"
+  end
+
   create_table "playlist_tracks", force: :cascade do |t|
     t.integer "song_id", null: false
     t.integer "playlist_id", null: false
@@ -29,7 +35,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_28_002428) do
 
   create_table "songs", force: :cascade do |t|
     t.string "title"
-    t.string "artist"
     t.string "genre"
     t.string "length"
     t.string "release_date"
