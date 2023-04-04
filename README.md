@@ -9,6 +9,7 @@ We're hoping you can poke around and fix anything that's wonky or missing functi
 Make this your own and have fun!
 
 ## Basics
+- create a new branch off the "main" branch and name it `pt-firstname-lastname`
 - in terminal cd into you host repo and run: `bundle install`
 - run `rails db:migrate` or `bin/rails db:migrate` to run all migrations
 - run `rails db:seed` or `bin/rails db:seed` to seed your database (will only need to do this once)
@@ -16,8 +17,7 @@ Make this your own and have fun!
 - visit http://localhost:3000/ to see the webpage
 - in a seperate terminal you can use `rails console` or `bin/rails console` to get into the project's console and practice querying the database
 
-Try to push all your changes as one commit once you feel as though you're ready to submit your code for this assessment 😎.
-
+Push all your changes up and create a Pull Request that points to this Repo's main branch when you're ready to submit this assessment😎.
 
 ## Tips
 - if you see any errors claiming you don't have rails installed when running `rails server` or any rails commands. Try the command with appending the "bin" directory: `bin/rails server`
