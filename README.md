@@ -1,13 +1,5 @@
 # README
 
-## Welcome to Playtunes
-
-This was designed to be a place where people can add songs and create playlists but it's not quite finished yet!
-
-We're hoping you can poke around and fix anything that's wonky or missing functionality. Feel free to do as much as you can and leave whatever notes within the code you feel necessary for context. We do NOT expect you write specs, but if you're confident in doing so...we're not going to stop you.
-
-Make this your own and have fun!
-
 ## Basics
 - create a new branch off the "main" branch and name it `pt-firstname-lastname`
 - in terminal cd into you host repo and run: `bundle install`
