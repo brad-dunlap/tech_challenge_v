@@ -1,7 +1,6 @@
 # README
 
 ## Basics
-- create a new branch off the "main" branch and name it `pt-firstname-lastname`
 - in terminal cd into you host repo and run: `bundle install`
 - run `rails db:migrate` or `bin/rails db:migrate` to run all migrations
 - run `rails db:seed` or `bin/rails db:seed` to seed your database (will only need to do this once)
