@@ -4,6 +4,7 @@ class PlaylistsController < ApplicationController
   end
 
   def show
+		require 'pry'; binding.pry
     @playlist = Playlist.find(params[:id])
     @songs_in_playlist = @playlist.songs
     @playlist_time_in_minutes = playlist_time_in_minutes
