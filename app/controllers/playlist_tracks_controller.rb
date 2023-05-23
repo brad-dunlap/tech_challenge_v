@@ -4,10 +4,9 @@ class PlaylistTracksController < ApplicationController
   def create
     attrs = {
       playlist_id: playlist_track_params[:playlist_id],
-      song_id: playlist_track_params[:playlist_track][:song_id]
+      song_id: playlist_track_params[:playlist_track][:song_id].to_i
     }
     @playlist = Playlist.find(playlist_track_params[:playlist_id])
-
     PlaylistTrack.create(attrs)
 
     redirect_to @playlist
@@ -16,9 +15,11 @@ class PlaylistTracksController < ApplicationController
 	def destroy
     @playlist = Playlist.find(params[:playlist_id])
     @track = @playlist.playlist_tracks.find(params[:id])
-		require 'pry'; binding.pry
-    @track.destroy
-    redirect_to playlist_path(@playlist)
+		if @track.destroy!
+    	redirect_to playlist_path(@playlist)
+		else
+			render :show, notice: 'Track was not removed.'
+		end
   end
 
 	private

@@ -14,7 +14,9 @@
 #
 # See https://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 require 'simplecov'
-SimpleCov.start
+SimpleCov.start do
+	add_filter 'spec/rails_helper.rb'
+end
 require 'factory_bot_rails'
 
 RSpec.configure do |config|
