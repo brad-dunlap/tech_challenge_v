@@ -83,4 +83,9 @@ group :test do
   gem 'webdrivers'
 	gem 'rspec-rails'
 	gem 'pry'
+	gem 'launchy'
+	gem 'orderly'
+	gem 'shoulda-matchers'
+	gem 'simplecov'
 end
+
