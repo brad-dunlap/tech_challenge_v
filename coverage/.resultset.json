@@ -332,6 +332,37 @@
           null
         ]
       },
+      "/Users/braddunlap/Desktop/jobs/vydia/brad_dunlap/spec/models/playlist_spec.rb": {
+        "lines": [
+          null,
+          1,
+          null,
+          1,
+          1,
+          2,
+          null,
+          null,
+          1,
+          2,
+          2,
+          null,
+          null
+        ]
+      },
+      "/Users/braddunlap/Desktop/jobs/vydia/brad_dunlap/app/models/playlist.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
       "/Users/braddunlap/Desktop/jobs/vydia/brad_dunlap/spec/models/song_spec.rb": {
         "lines": [
           null,
@@ -381,23 +412,8 @@
           1,
           null
         ]
-      },
-      "/Users/braddunlap/Desktop/jobs/vydia/brad_dunlap/app/models/playlist.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          1,
-          null,
-          1,
-          null,
-          1,
-          null,
-          null,
-          null
-        ]
       }
     },
-    "timestamp": 1684857860
+    "timestamp": 1684857978
   }
 }
