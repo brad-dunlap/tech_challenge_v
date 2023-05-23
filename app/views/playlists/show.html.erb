@@ -19,7 +19,8 @@
           <td><%= song.artist.name %></td>
           <td><%= song.genre %></td>
           <td><%= song.length %></td>
-          <td><%= button_to "Remove", "/", method: :post, class: "btn btn-danger btn-lg"%></td>
+					<td> <%= button_to "Remove", playlist_playlist_track_path(@playlist, song), method: :delete, class: "btn btn-danger btn-lg" %>
+					 </td>
         </tr>
         <% track_number += 1 %>
       <% end %>
