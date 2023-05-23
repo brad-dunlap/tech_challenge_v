@@ -1,7 +1,6 @@
 class Song < ApplicationRecord
   has_many :playlist_tracks
   has_many :playlists, through: :playlist_tracks
-	belongs_to :artist
 
 	validates :title, presence: true, uniqueness: true
 	validates :length, presence: true, numericality: { greater_than: 0 }
@@ -9,7 +8,7 @@ class Song < ApplicationRecord
 	validates :release_date, presence: true
 
 
-  def get_longest_song
-    # TODO: filter
+  def self.get_longest_song
+    order(length: :desc).first
   end
 end

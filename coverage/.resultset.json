@@ -19,7 +19,7 @@
         "lines": [
           null,
           1,
-          null,
+          1,
           null,
           1,
           1,
@@ -291,6 +291,19 @@
           null
         ]
       },
+      "/Users/braddunlap/Desktop/jobs/vydia/brad_dunlap/spec/factories/songs.rb": {
+        "lines": [
+          null,
+          1,
+          1,
+          4,
+          4,
+          1,
+          4,
+          null,
+          null
+        ]
+      },
       "/Users/braddunlap/Desktop/jobs/vydia/brad_dunlap/config/routes.rb": {
         "lines": [
           1,
@@ -404,6 +417,18 @@
           2,
           2,
           null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          null,
           null
         ]
       },
@@ -412,7 +437,6 @@
           1,
           1,
           1,
-          1,
           null,
           1,
           1,
@@ -421,12 +445,12 @@
           null,
           null,
           1,
-          null,
+          1,
           null,
           null
         ]
       }
     },
-    "timestamp": 1684858027
+    "timestamp": 1684858817
   }
 }

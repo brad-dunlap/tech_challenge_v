@@ -37,6 +37,8 @@ gem 'jquery-rails'
 
 gem 'faker'
 
+gem 'factory_bot_rails'
+
 gem 'rubocop-rails'
 
 # Use Redis adapter to run Action Cable in production

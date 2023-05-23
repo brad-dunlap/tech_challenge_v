@@ -13,4 +13,16 @@ RSpec.describe Song, type: :model do
     it { should have_many(:playlist_tracks) }
     it { should have_many(:playlists).through(:playlist_tracks) }
   end
+
+	describe 'class methods' do
+		it 'should return the longest song' do
+			short = create(:song, length: 200)
+			med = create(:song, length: 250)
+			long = create(:song, length: 300)
+
+			result = Song.get_longest_song
+			
+			expect(result).to eq(long)
+		end
+	end
 end
