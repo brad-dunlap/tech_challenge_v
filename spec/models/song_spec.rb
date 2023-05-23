@@ -10,6 +10,7 @@ RSpec.describe Song, type: :model do
   end
 
   describe 'associations' do
+		it { should belong_to(:artist) }
     it { should have_many(:playlist_tracks) }
     it { should have_many(:playlists).through(:playlist_tracks) }
   end

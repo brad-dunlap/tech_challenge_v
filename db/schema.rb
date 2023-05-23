@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_04_03_120230) do
+ActiveRecord::Schema[7.0].define(version: 2023_05_23_162816) do
   create_table "artists", force: :cascade do |t|
     t.string "name"
     t.string "image_url"
@@ -40,8 +40,11 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_03_120230) do
     t.string "release_date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "artist_id"
+    t.index ["artist_id"], name: "index_songs_on_artist_id"
   end
 
   add_foreign_key "playlist_tracks", "playlists"
   add_foreign_key "playlist_tracks", "songs"
+  add_foreign_key "songs", "artists"
 end

@@ -291,6 +291,18 @@
           null
         ]
       },
+      "/Users/braddunlap/Desktop/jobs/vydia/brad_dunlap/spec/factories/artists.rb": {
+        "lines": [
+          null,
+          1,
+          1,
+          4,
+          4,
+          4,
+          null,
+          null
+        ]
+      },
       "/Users/braddunlap/Desktop/jobs/vydia/brad_dunlap/spec/factories/songs.rb": {
         "lines": [
           null,
@@ -300,6 +312,7 @@
           4,
           1,
           4,
+          1,
           null,
           null
         ]
@@ -332,6 +345,8 @@
         "lines": [
           null,
           1,
+          1,
+          null,
           1,
           1,
           1,
@@ -416,6 +431,7 @@
           1,
           2,
           2,
+          2,
           null,
           null,
           1,
@@ -437,6 +453,7 @@
           1,
           1,
           1,
+          1,
           null,
           1,
           1,
@@ -451,6 +468,6 @@
         ]
       }
     },
-    "timestamp": 1684858817
+    "timestamp": 1684859679
   }
 }

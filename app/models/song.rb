@@ -1,6 +1,7 @@
 class Song < ApplicationRecord
   has_many :playlist_tracks
   has_many :playlists, through: :playlist_tracks
+	belongs_to :artist
 
 	validates :title, presence: true, uniqueness: true
 	validates :length, presence: true, numericality: { greater_than: 0 }
