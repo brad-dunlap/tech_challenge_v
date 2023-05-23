@@ -6,6 +6,6 @@ class Playlist < ApplicationRecord
   validates :title, presence: true
 
   def sort_by_artist_name
-    # TODO: implement if possible
+    songs.joins(:artist).order('artists.name ASC')
   end
 end
