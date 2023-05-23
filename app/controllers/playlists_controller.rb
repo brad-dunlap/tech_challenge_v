@@ -8,14 +8,12 @@ class PlaylistsController < ApplicationController
       @playlists.sort_by! { |playlist| @playlist_times[playlist.id] }.reverse!
     end
   end
-		
 
   def show
 		@playlist = Playlist.find(params[:id])
 		@songs_in_playlist = @playlist.songs
 		@playlist_time_minutes = playlist_time_in_minutes(@playlist)
 	end
-	
 
   def new
     @playlist = Playlist.new

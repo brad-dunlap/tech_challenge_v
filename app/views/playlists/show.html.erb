@@ -1,32 +1,30 @@
 <div style="margin: 100px">
-<div class='d-flex justify-content-center' style="margin: 100px;" >
-    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-    <button class="btn btn-primary" type="submit">Search in Playlist by Artist</button>
-</div>
-<h1><% @playlist.title %></h1>
-<table class="table" style="margin: 50px">
-  <thead>
-    <tr>
-      <th scope="col">Playlist Track #</th>
-      <th scope="col">Name</th>
-      <th scope="col">Artist</th>
-      <th scope="col">Genre</th>
-      <th scope="col">Length</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @songs_in_playlist.map do |song| %>
+  <!-- ... existing code ... -->
+  <table class="table" style="margin: 50px">
+    <thead>
       <tr>
-      <th scope="row"><%= song.id %></th>
-        <td><%= song.title %></td>
-        <td><%= song.artist.name %></td>
-        <td><%= song.genre %></td>
-        <td><%= song.length %></td>
-        <td><%= button_to "Remove", "/", method: :post, class: "btn btn-danger btn-lg"%></td>
+        <th scope="col">Playlist Track #</th>
+        <th scope="col">Name</th>
+        <th scope="col">Artist</th>
+        <th scope="col">Genre</th>
+        <th scope="col">Length</th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
+    <tbody>
+      <% track_number = 1 %>
+      <% @songs_in_playlist.each do |song| %>
+        <tr>
+          <th scope="row"><%= track_number %></th>
+          <td><%= song.title %></td>
+          <td><%= song.artist.name %></td>
+          <td><%= song.genre %></td>
+          <td><%= song.length %></td>
+          <td><%= button_to "Remove", "/", method: :post, class: "btn btn-danger btn-lg"%></td>
+        </tr>
+        <% track_number += 1 %>
+      <% end %>
+    </tbody>
+  </table>
 <div style="margin: 50px">
   <h5 style="margin: 50px">Play Time in Minutes: <%= @playlist_time_minutes %></h5>
 </div>
