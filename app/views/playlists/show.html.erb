@@ -19,7 +19,7 @@
       <tr>
       <th scope="row"><%= song.id %></th>
         <td><%= song.title %></td>
-        <td><%= %></td>
+        <td><%= song.artist.name %></td>
         <td><%= song.genre %></td>
         <td><%= song.length %></td>
         <td><%= button_to "Remove", "/", method: :post, class: "btn btn-danger btn-lg"%></td>
