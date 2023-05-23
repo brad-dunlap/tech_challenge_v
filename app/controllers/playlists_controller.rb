@@ -19,7 +19,9 @@ class PlaylistsController < ApplicationController
     @playlist = Playlist.new
   end
 
-  def create; end
+  def create
+		
+  end
 
 	private 
   def playlist_time_in_minutes(playlist)
