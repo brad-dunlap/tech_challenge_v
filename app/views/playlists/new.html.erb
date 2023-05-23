@@ -1,24 +1,18 @@
 <div class="container" style="margin-top: 100px">
-  <div class="child">
-    <div class="child">
-      <h1> New Playlist </h1>
+  <div class="row">
+    <div class="col">
+      <h1>Create a New Playlist</h1>
+      <%= form_with model: @playlist, url: playlists_path, method: :post do |form| %>
+        <div class="mb-3">
+          <label for="validationCustom01" class="form-label">Playlist Title</label>
+          <%= form.text_field :title, class: "form-control" %>
+        </div>
+        <div class="mb-3">
+          <label for="validationCustom01" class="form-label">Image URL for Playlist</label>
+          <%= form.text_field :img, class: "form-control" %>
+        </div>
+        <%= form.submit "Create Playlist", class: "btn btn-primary" %>
+      <% end %>
     </div>
-    <%= form_with model: @playlist, url: playlists_path, method: :post do |form| %>
-  <div class="mb-3">
-    <label for="validationCustom01" class="form-label">Playlist Title</label>
-    <%= form.text_field :title, class: "form-control" %>
-  </div>
-  <div class="mb-3">
-    <label for="validationCustom01" class="form-label">Image URL for Playlist</label>
-    <%= form.text_field :img, class: "form-control" %>
-  </div>
-  <%= form.submit "Create Playlist", class: "btn btn-primary" %>
-<% end %>
-
-  </div>
-</div>
-<div class="container" style="margin: 50px">
-  <div class="child" style="margin: 50px;">
-    <a href="/" class="btn btn-primary">Back to Playlists</a>
   </div>
 </div>
