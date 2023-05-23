@@ -16,8 +16,14 @@ def random_release_date
 end
 
 def song_attributes(artist)
+  title = Faker::Music::RockBand.song
+
+  while Song.exists?(title: title)
+    title = Faker::Music::RockBand.song
+  end
+
   {
-    title: Faker::Music::RockBand.song,
+    title: title,
     genre: Faker::Music.genre,
     length: random_song_length,
     release_date: random_release_date,

@@ -8,7 +8,7 @@
 
 <div style="margin: 100px;">
   <div class="row row-cols-1 row-cols-md-3 g-4">
-    <% @playlists.map do |playlist| %>
+    <% @playlists.each do |playlist| %>
       <div class="col">
         <div class="card" style="width: 35rem;">
           <div class="card text-center">
@@ -17,8 +17,8 @@
               <h5 class="card-title"><%= playlist.title %></h5>
               <a href="playlists/<%= playlist.id %>" class="btn btn-primary">View Playlist</a>
               <div class="card-footer" style="margin-top: 10px">
-                <h6>Play Time in Minutes: <%= @playlist_time_minutes[playlist.id] %></h6>
-              </div>
+  							<h6>Play Time in Minutes: <%= @playlist_times[playlist.id] %></h6>
+							</div>
             </div>
           </div>
         </div>
@@ -26,6 +26,7 @@
     <% end %>
   </div>
 </div>
+
 <div class="row row-cols-1 row-cols-md-3 g-4" style="padding: 50px">
   <div style="padding: 10px">
     <a href="playlists/new" class="btn btn-primary">Create New Playlist</a>
@@ -34,11 +35,14 @@
     <a href="songs/new" class="btn btn-primary">Add New Song to Archive</a>
   </div>
   <div style="padding: 10px">
-    <select class="form-select" aria-label="Default select example">
+    <form action="/playlists" method="get">
+      <select class="form-select" name="sort" aria-label="Default select example">
         <option selected>Sort Playlists By</option>
-        <option value="1">Longest Playtime</option>
-        <option value="2">Shortest Playtime</option>
-    </select>
+        <option value="longest">Longest Playtime</option>
+        <option value="shortest">Shortest Playtime</option>
+      </select>
+      <button type="submit" class="btn btn-primary">Sort</button>
+    </form>
   </div>
 </div>
 
