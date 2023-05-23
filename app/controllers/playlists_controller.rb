@@ -7,7 +7,7 @@ class PlaylistsController < ApplicationController
   def show
     @playlist = Playlist.find(params[:id])
     @songs_in_playlist = @playlist.songs
-    @playlist_time_in_minutes = playlist_time_in_minutes(@playlist)
+    @playlist_time_minutes = playlist_time_in_minutes(@playlist)
   end
 
   def new
