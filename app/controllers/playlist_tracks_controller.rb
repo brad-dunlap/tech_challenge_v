@@ -16,6 +16,7 @@ class PlaylistTracksController < ApplicationController
 	def destroy
     @playlist = Playlist.find(params[:playlist_id])
     @track = @playlist.playlist_tracks.find(params[:id])
+		require 'pry'; binding.pry
     @track.destroy
     redirect_to playlist_path(@playlist)
   end

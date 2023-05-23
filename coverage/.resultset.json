@@ -342,16 +342,16 @@
       "/Users/braddunlap/Desktop/jobs/vydia/brad_dunlap/config/routes.rb": {
         "lines": [
           1,
-          null,
-          null,
-          null,
-          null,
-          null,
           1,
           null,
           1,
           1,
+          1,
           null,
+          1,
+          null,
+          null,
+          1,
           null,
           1,
           null
@@ -518,6 +518,6 @@
         ]
       }
     },
-    "timestamp": 1684862458
+    "timestamp": 1684876773
   }
 }
