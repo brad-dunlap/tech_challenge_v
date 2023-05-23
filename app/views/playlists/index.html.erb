@@ -17,7 +17,7 @@
               <h5 class="card-title"><%= playlist.title %></h5>
               <a href="playlists/<%= playlist.id %>" class="btn btn-primary">View Playlist</a>
               <div class="card-footer" style="margin-top: 10px">
-                <h6>Play Time in Minutes: <%= @playlist_time_minutes %></h6>
+                <h6>Play Time in Minutes: <%= @playlist_time_minutes[playlist.id] %></h6>
               </div>
             </div>
           </div>
