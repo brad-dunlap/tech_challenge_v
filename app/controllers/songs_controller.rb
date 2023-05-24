@@ -1,7 +1,7 @@
 class SongsController < ApplicationController
   def new
     @song = Song.new
-		@artists = Artist.order(:name).select(:name).distinct
+    @artists = Artist.order(:name).select(:name).distinct
   end
 
   def create

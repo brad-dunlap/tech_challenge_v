@@ -1,5 +1,5 @@
 class PlaylistsController < ApplicationController
-	before_action :set_playlist, only: [:show, :search]
+  before_action :set_playlist, only: %i[show search]
 
   def index
     @playlists = Playlist.all.to_a
@@ -33,7 +33,8 @@ class PlaylistsController < ApplicationController
     artist_name = params[:artist]
 
     if artist_name.present?
-      @songs_in_playlist = @playlist.songs.joins(:artist).where('LOWER(artists.name) LIKE ?', "%#{artist_name.downcase}%")
+      @songs_in_playlist = @playlist.songs.joins(:artist).where('LOWER(artists.name) LIKE ?',
+                                                                "%#{artist_name.downcase}%")
       @playlist_time_minutes = "Approx. #{@songs_in_playlist.sum(:length)} minutes"
 
     else
@@ -69,7 +70,7 @@ class PlaylistsController < ApplicationController
     params.require(:playlist).permit(:title, :img)
   end
 
-	def set_playlist
-		@playlist = Playlist.find(params[:id])
-	end
+  def set_playlist
+    @playlist = Playlist.find(params[:id])
+  end
 end
