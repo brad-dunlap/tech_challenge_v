@@ -13,8 +13,10 @@
             <img src="<%= playlist.img %>" class="card-img-top" alt="<%= playlist.title %>">
             <div class="card-body">
               <h5 class="card-title"><%= playlist.title %></h5>
+              <!-- Link to view the details of a playlist -->
               <a href="playlists/<%= playlist.id %>" class="btn btn-primary">View Playlist</a>
               <div class="card-footer" style="margin-top: 10px">
+                <!-- Displaying the play time of the playlist -->
                 <h6>Play Time in Minutes: <%= @playlist_times[playlist.id] %></h6>
               </div>
             </div>
@@ -27,16 +29,20 @@
 
 <div class="d-flex justify-content-center" style="padding: 50px">
   <div style="padding: 10px">
+    <!-- Link to create a new playlist -->
     <a href="playlists/new" class="btn btn-primary">Create New Playlist</a>
   </div>
 	<div style="padding: 10px">
-  <%= link_to "Add New Artist to Archive", new_artist_path, class: "btn btn-primary" %>
-</div>
+    <!-- Link to add a new artist to the archive -->
+    <%= link_to "Add New Artist to Archive", new_artist_path, class: "btn btn-primary" %>
+  </div>
   <div style="padding: 10px">
+    <!-- Link to add a new song to the archive -->
     <a href="songs/new" class="btn btn-primary">Add New Song to Archive</a>
   </div>
   <div style="padding: 10px">
     <form action="/playlists" method="get" class="d-flex align-items-center">
+      <!-- Dropdown for sorting playlists -->
       <select class="form-select me-2" name="sort" aria-label="Default select example">
         <option selected>Sort Playlists By</option>
         <option value="longest">Longest Playtime</option>
