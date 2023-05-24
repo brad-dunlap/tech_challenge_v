@@ -5,6 +5,7 @@
       <%= form.label :title, class: "form-label" %>
       <%= form.text_field :title, class: "form-control" %>
     </div>
+		<!-- Ideally this would be a nested form to create an Artist if the desired Artist is not currently in the database -->
     <div class="mb-3">
       <%= form.label :artist_id, class: "form-label" %>
       <%= form.collection_select :artist_id, @artists, :id, :name, { prompt: "-- Select Artist --" }, class: "form-select" %>
