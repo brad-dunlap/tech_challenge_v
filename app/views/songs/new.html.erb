@@ -7,7 +7,7 @@
     </div>
     <div class="mb-3">
       <%= form.label :artist_id, class: "form-label" %>
-      <%= form.collection_select :artist_id, Artist.order(:name), :id, :name, { prompt: "-- Select Artist --" }, class: "form-select" %>
+      <%= form.collection_select :artist_id, @artists, :id, :name, { prompt: "-- Select Artist --" }, class: "form-select" %>
     </div>
     <div class="mb-3">
       <%= form.label :genre, class: "form-label" %>
