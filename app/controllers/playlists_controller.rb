@@ -28,24 +28,24 @@ class PlaylistsController < ApplicationController
     end
   end
 
-	def search
-		@playlist = Playlist.find(params[:id])
-		
-		artist_name = params[:artist]
-	
-		if artist_name.present?
-			@songs_in_playlist = @playlist.songs.joins(:artist).where('LOWER(artists.name) LIKE ?', "%#{artist_name.downcase}%")
-			@playlist_time_minutes = "Approx. #{@songs_in_playlist.sum(:length)} minutes"
-			
-		else
-			@songs_in_playlist = []
-			flash.now[:notice] = 'No songs in playlist'
-			@playlist_time_minutes = 0
-		end		
-	
-		render :show
-	end
-	
+  def search
+    @playlist = Playlist.find(params[:id])
+
+    artist_name = params[:artist]
+
+    if artist_name.present?
+      @songs_in_playlist = @playlist.songs.joins(:artist).where('LOWER(artists.name) LIKE ?',
+                                                                "%#{artist_name.downcase}%")
+      @playlist_time_minutes = "Approx. #{@songs_in_playlist.sum(:length)} minutes"
+
+    else
+      @songs_in_playlist = []
+      flash.now[:notice] = 'No songs in playlist'
+      @playlist_time_minutes = 0
+    end
+
+    render :show
+  end
 
   private
 

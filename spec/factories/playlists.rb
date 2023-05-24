@@ -1,4 +1,4 @@
-#spec/factories/playlists.rb
+# spec/factories/playlists.rb
 FactoryBot.define do
   factory :playlist do
     title { Faker::Lorem.word }

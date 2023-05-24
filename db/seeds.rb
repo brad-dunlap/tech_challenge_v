@@ -18,9 +18,7 @@ end
 def song_attributes(artist)
   title = Faker::Music::RockBand.song
 
-  while Song.exists?(title: title)
-    title = Faker::Music::RockBand.song
-  end
+  title = Faker::Music::RockBand.song while Song.exists?(title: title)
 
   {
     title: title,

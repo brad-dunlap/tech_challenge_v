@@ -12,15 +12,15 @@ class PlaylistTracksController < ApplicationController
     redirect_to @playlist
   end
 
-	def destroy
+  def destroy
     @playlist = Playlist.find(params[:playlist_id])
     @track = @playlist.playlist_tracks.find(params[:id])
 
-		@track.destroy!
-		redirect_to playlist_path(@playlist)
+    @track.destroy!
+    redirect_to playlist_path(@playlist)
   end
 
-	private
+  private
 
   def playlist_track_params
     params.permit({ playlist_track: [:song_id] }, :playlist_id)

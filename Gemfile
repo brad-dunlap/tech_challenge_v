@@ -81,13 +81,12 @@ end
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem 'capybara'
+  gem 'launchy'
+  gem 'orderly'
+  gem 'pry-rails'
+  gem 'rspec-rails'
   gem 'selenium-webdriver'
+  gem 'shoulda-matchers'
+  gem 'simplecov'
   gem 'webdrivers'
-	gem 'rspec-rails'
-	gem 'pry-rails'
-	gem 'launchy'
-	gem 'orderly'
-	gem 'shoulda-matchers'
-	gem 'simplecov'
 end
-

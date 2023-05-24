@@ -4,7 +4,7 @@ class SongsController < ApplicationController
   end
 
   def create
-   @song = Song.new(song_params)
+    @song = Song.new(song_params)
     if @song.save!
       redirect_to root_path, notice: 'Song was successfully created.'
     else
@@ -15,6 +15,6 @@ class SongsController < ApplicationController
   private
 
   def song_params
-		params.require(:song).permit(:title, :genre, :length, :artist_id, :release_date)
-	end
+    params.require(:song).permit(:title, :genre, :length, :artist_id, :release_date)
+  end
 end
